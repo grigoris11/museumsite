@@ -1,0 +1,185 @@
+/* Navigation bar */
+.main-nav {
+    background-color: rgba(75, 72, 72, 0.685);
+    padding: 10px 0;
+    text-align: center;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Cormorant Garamond', serif;
+}
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Image Wall */
+.image-wall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 60px auto;
+    background: transparent; /* 🔍 Transparent background */
+}
+
+
+.image-wall img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #e6dcc5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-wall img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Viewer */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#imageModal.active {
+    display: block;
+}
+
+#modalContent {
+    display: block;
+    margin: 5% auto;
+    max-width: 90vw;
+    max-height: 80vh;
+    border: 5px solid #e6dcc5;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+/* Background Video */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Fix body and html overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background: transparent;
+}
+
+/* Fullscreen background video behavior */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Content sits above background video */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* Basic paragraph style */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Button style (used on VR TOUR and others) */
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #e6dcc5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d4c79a;
+}
+
+/* Light grey box background (used for intro/history block) */
+.grey-box {
+    background-color: rgba(240, 240, 240, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+.media-wall-title {
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto 30px;
+    background-color: rgba(223, 206, 176, 0.8);
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 2em;
+    font-family: 'Cormorant Garamond', serif;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+.close, .prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.close {
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+}
+
+.prev {
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 20px;
+    transform: translateY(-50%);
+}

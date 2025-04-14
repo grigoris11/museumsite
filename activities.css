@@ -1,0 +1,115 @@
+/* Navigation bar */
+.main-nav {
+    background-color: rgba(75, 72, 72, 0.685);
+    padding: 10px 0;
+    text-align: center;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Cormorant Garamond', serif;
+}
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Page content */
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Cormorant Garamond', serif;
+}
+p {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Cormorant Garamond', serif;
+}
+/* Background Video */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Fix body and html overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background: transparent;
+}
+
+/* Fullscreen background video behavior */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Content sits above background video */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* Basic paragraph style */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Button style (used on VR TOUR and others) */
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #e6dcc5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d4c79a;
+}
+
+/* Light grey box background (used for intro/history block) */
+.grey-box {
+    background-color: rgba(240, 240, 240, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+.activities-box {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: rgba(223, 206, 176, 0.8);
+    border-radius: 12px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Cormorant Garamond', serif;
+}

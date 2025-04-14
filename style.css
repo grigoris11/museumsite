@@ -1,0 +1,175 @@
+
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background video stays fixed and unobtrusive */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+/* Welcome section */
+#welcome {
+    width: 100%;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Heading styles */
+#welcome h1 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 30px;
+    color: white;
+}
+
+#intro-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Intro text box */
+#intro-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    padding: 25px 35px;
+    background-image: url('img/parchment_texture.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    border: 2px solid #d4c79a;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: black;
+    text-align: justify;
+}
+
+/* Button styling */
+#welcome button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    background-color: #e6dcc5;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#welcome button:hover {
+    background-color: #d4c79a;
+}
+
+/* Panorama viewer */
+#panorama {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+/* Modal for image wall */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#imageModal.active {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #welcome h1 {
+        font-size: 1.6em;
+        padding: 0 15px;
+    }
+
+    #intro-heading {
+        font-size: 1.3em;
+    }
+
+    #intro-text {
+        padding: 20px;
+        font-size: 1em;
+        margin: 0 10px 20px;
+    }
+
+    #welcome button {
+        font-size: 1em;
+        padding: 12px 30px;
+    }
+}
+#modalContent {
+    display: block;
+    margin: 5% auto;
+    max-width: 90vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border: 5px solid #e6dcc5;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+.image-wall img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #e6dcc5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-gallery a {
+    display: block;
+    width: 150px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery a:hover {
+    transform: scale(1.05);
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+

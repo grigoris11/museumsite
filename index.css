@@ -1,0 +1,96 @@
+/* Navigation bar */
+.main-nav {
+    background-color: rgba(75, 72, 72, 0.685);
+    padding: 10px 0;
+    text-align: center;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Cormorant Garamond', serif;
+}
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome page layout */
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#intro-text {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:  rgba(223, 206, 176, 0.9);
+    border-radius: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+}
+/* Background Video */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Fix body and html overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background: transparent;
+}
+
+
+
+/* Content sits above background video */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* Basic paragraph style */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Button style (used on VR TOUR and others) */
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #e6dcc5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #dfb213;
+}
+
+/* Light grey box background (used for intro/history block) */
+.grey-box {
+    background-color: rgba(240, 240, 240, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
